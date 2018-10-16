@@ -4,6 +4,6 @@ curl https://repo.continuum.io/miniconda/Miniconda3-${CONDA_VER}-MacOSX-x86_64.s
 bash ~/miniconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
 
-conda install pip
+conda install pip -y
 python --version
 pip --version
