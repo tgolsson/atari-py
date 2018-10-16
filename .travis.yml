@@ -2,7 +2,7 @@ language: python
 matrix:
     include:
     - os: osx
-      osx_image: xcode10
+      osx_image: xcode8.3
       python: 3.7
       env:
         - DEPLOY_SDIST=true
