@@ -1,3 +1,4 @@
+language: sh
 matrix:
     include:
     - os: osx
