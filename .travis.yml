@@ -3,7 +3,6 @@ matrix:
     include:
     - os: osx
       osx_image: xcode8.3
-      python: 3.6
       env:
         - DEPLOY_SDIST=true
         - PATH=$HOME/miniconda/bin:$PATH
@@ -19,6 +18,10 @@ matrix:
         - docker build -t atari-py-img -f dockerfile.${PYTHON_VER} . 
       script: 
         - docker run -e TRAVIS_TAG=$TRAVIS_TAG -e TWINE_USERNAME=$TWINE_USERNAME -e TWINE_PASSWORD=$TWINE_PASSWORD atari-py-img bash ./build_and_deploy.sh
+
+    - os: windows
+      script:
+        - python --version
     
 
         
