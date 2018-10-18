@@ -1,4 +1,3 @@
-language: python
 matrix:
     include:
     - os: osx
@@ -20,6 +19,8 @@ matrix:
         - docker run -e TRAVIS_TAG=$TRAVIS_TAG -e TWINE_USERNAME=$TWINE_USERNAME -e TWINE_PASSWORD=$TWINE_PASSWORD atari-py-img bash ./build_and_deploy.sh
 
     - os: windows
+      install:
+        - choco install python
       script:
         - python --version
     
