@@ -21,7 +21,7 @@ matrix:
 
     - os: windows
       install:
-        - choco install python
+        - choco --version
       script:
         - python --version
     
